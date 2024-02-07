@@ -3,10 +3,10 @@
         <div class="navbar-collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto" v-if="userRole ==='ADMIN'">
             <li class="nav-item" >
-                <a class="nav-link" href="/post/list">회원관리</a>
+                <a class="nav-link" href="/members">회원관리</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/author/create">상품관리</a></li>
-            <li class="nav-item"><a class="nav-link" href="/author/create">주문관리</a></li>
+            <li class="nav-item"><a class="nav-link" href="/items/manage">상품관리</a></li>
+            <li class="nav-item"><a class="nav-link" href="/orders">주문관리</a></li>
             <!--  doLogout을 통해 로그아웃 버튼을 누르면 로그인이 풀려, 회원관리, 게시글목록에 대한 접근이 불가능 해짐-->
         </ul>
     </div>
@@ -43,7 +43,9 @@ export default {
         if(localStorage.getItem("token")){
             this.isLogin = true;
             this.userRole = localStorage.getItem("Role");
+            
         }
+        
     },
     methods: {
         doLogout(){

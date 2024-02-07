@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="page-header"><h1>회원 목록</h1></div>
+        <div class="page-header text-center" style="margin-top:20px;"><h1>회원 목록</h1></div>
         <table class="table">
             <thead>
             <tr>
@@ -15,7 +15,10 @@
                 <td>{{ member.id }}</td>
                 <td>{{ member.name }}</td>
                 <td>{{ member.email }}</td>
-                <td>{{ member.orderCount }}</td>
+                <td>
+                    <a :href=" `/member/${member.id}/orders`">{{ member.orderCount }}</a>
+                    
+                </td>
             </tr>
             </tbody>
         </table>

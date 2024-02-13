@@ -44,7 +44,6 @@
   </template>
   <script>
   import axios from "axios";
-  
   export default {
     data() {
       return {
@@ -67,7 +66,6 @@
             street: this.street,
             zipcode: this.zipcode,
           };
-  
           await axios.post(
             `${process.env.VUE_APP_API_BASE_URL}/member/create`,
             registerData
@@ -90,3 +88,11 @@
     },
   };
   </script>
+  
+  
+  
+  
+  
+  
+  
+  
